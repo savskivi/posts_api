@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./null.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Feed</h1>
+
+      <div class="container">
+        <div class="search">
+          <input class="search-input" type="text" placeholder="Search..." />
+          <button class="search-btn">
+            <img src="./img/search_icon.svg" alt="seach icon" />
+          </button>
+        </div>
+
+        <div class="wrap">
+          <select class="sort">
+            <option value="1">By default</option>
+            <option value="2">By number of likes</option>
+            <option value="3">By number of views</option>
+            <option value="4">Alphabetically</option>
+          </select>
+
+          <select class="tag-list">
+            <option value="" class="tag">#All tags</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- TAGS TEMPLATE -->
+      <template class="tag-template">
+        <option class="tag">#tag</option>
+      </template>
+
+      <div class="post-list">
+        <!-- Posts template -->
+        <template class="post-template">
+          <div class="post">
+            <div class="post-title">Post Title</div>
+            <div class="post-body">This is the body of the post.</div>
+
+            <div class="post-tags"></div>
+
+            <div class="post-stats">
+              <div>❤️ <span class="likes">12 likes</span></div>
+              <div>👎 <span class="dislikes">3 dislikes</span></div>
+              <div>👁‍🗨 <span class="views">150 views</span></div>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <div class="pagination">
+        <button class="pagination-left">
+          <img src="./img/arrow_left_icon.svg" alt="arrow left icon" />
+        </button>
+        <span class="pagination-page">1</span>
+        <button class="pagination-right">
+          <img src="./img/arrow_right_icon.svg" alt="arrow right icon" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
